@@ -354,7 +354,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sounds:
-  - audioID: button_press
+  - audioID: 1
     audioClip: {fileID: 8300000, guid: 9aa0b132c34734f90b6acddaaeb677b4, type: 3}
   audioSource: {fileID: 1582835700}
 --- !u!82 &1582835700
