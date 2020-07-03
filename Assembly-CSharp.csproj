@@ -45,6 +45,7 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\ColliderTesting.cs" />
      <Compile Include="Assets\Counter.cs" />
      <Compile Include="Assets\Sparkshift\Scripts\Audio\AudioManager.cs" />
      <Compile Include="Assets\Sparkshift\Scripts\Audio\AudioReference.cs" />
