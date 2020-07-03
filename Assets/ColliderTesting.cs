@@ -1,30 +1,13 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class ColliderTesting : MonoBehaviour
-{
-    public Vector2 centerPos;
-    public Vector2 size;
-    
-    [Space]
-    public GameObject colliderRepresentation;
+{   
+    Vector2 centerPosition = new Vector2(0.8f, 0.5f);
+    Vector2 size = new Vector2(0.5f, 0.5f);
 
-    void Update()
+    void Start()
     {
-        colliderRepresentation.transform.position = centerPos;
-        colliderRepresentation.transform.localScale = new Vector3(size.x * 2, size.y * 2, 1);
-
-        if (Input.GetKeyDown("space"))
-        {
-            // foreach (Collider2D col in Physics2D.OverlapBoxAll(centerPos, size, 0))
-            // {
-            //     Debug.Log(col.gameObject);
-            // }
-            foreach (Collider2D col in Physics2D.OverlapAreaAll(new Vector2(centerPos.x - size.x, centerPos.y - size.y), new Vector2(centerPos.x + size.x, centerPos.y + size.y)))
-            {
-                Debug.Log(col.gameObject);
-            }
-        }
+        Debug.Log(Physics2D.OverlapBox(centerPosition, size, 0));
+        // returns null despite one-block square collider at 0,0
     }
 }
